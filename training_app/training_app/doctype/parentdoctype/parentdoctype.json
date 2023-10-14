@@ -1,0 +1,213 @@
+{
+ "actions": [
+  {
+   "action": "training_app.training_app.doctype.parentdoctype.parentdoctype.execute_function",
+   "action_type": "Server Action",
+   "label": "Execute"
+  },
+  {
+   "action": "Form/Customer/{frm.doc.customer}",
+   "action_type": "Route",
+   "label": "Route"
+  }
+ ],
+ "allow_rename": 1,
+ "autoname": "format:PD-{##}",
+ "creation": "2023-09-01 00:37:44.284279",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "party_type",
+  "party",
+  "customer",
+  "currency",
+  "exchange",
+  "enable",
+  "column_break_h6lwy",
+  "discount_percentage",
+  "discount_amount",
+  "company",
+  "accounting_details_section",
+  "account",
+  "section_break_gijqt",
+  "date",
+  "datetime",
+  "section_break_brr6u",
+  "item_group",
+  "child_field",
+  "section_break_fvku2",
+  "total_quantity",
+  "column_break_yjmge",
+  "total",
+  "net_total",
+  "txt",
+  "abra"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "child_field",
+   "fieldtype": "Table",
+   "label": "Child Field",
+   "options": "ChildTable"
+  },
+  {
+   "fieldname": "section_break_fvku2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_quantity",
+   "fieldtype": "Float",
+   "label": "Total Quantity"
+  },
+  {
+   "fieldname": "column_break_yjmge",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total"
+  },
+  {
+   "fieldname": "column_break_h6lwy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "discount_percentage",
+   "fieldtype": "Float",
+   "label": "Discount Percentage"
+  },
+  {
+   "depends_on": "// eval:doc.discount_percentage == 50",
+   "fieldname": "discount_amount",
+   "fieldtype": "Currency",
+   "label": "Discount Amount"
+  },
+  {
+   "fieldname": "section_break_brr6u",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "net_total",
+   "fieldtype": "Currency",
+   "label": "Net Total "
+  },
+  {
+   "default": "0",
+   "fieldname": "enable",
+   "fieldtype": "Check",
+   "label": "Enable"
+  },
+  {
+   "fieldname": "item_group",
+   "fieldtype": "Link",
+   "label": "Item Group",
+   "options": "Item Group"
+  },
+  {
+   "fieldname": "txt",
+   "fieldtype": "Data",
+   "label": "txt"
+  },
+  {
+   "fieldname": "abra",
+   "fieldtype": "Data",
+   "label": "Abra"
+  },
+  {
+   "fieldname": "section_break_gijqt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Data",
+   "label": "Date"
+  },
+  {
+   "fieldname": "datetime",
+   "fieldtype": "Datetime",
+   "label": "Datetime"
+  },
+  {
+   "fieldname": "account",
+   "fieldtype": "Link",
+   "label": "Account",
+   "mandatory_depends_on": "eval:!doc.customer",
+   "options": "Account"
+  },
+  {
+   "fetch_from": "account.account_currency",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "exchange",
+   "fieldtype": "Currency",
+   "label": "Exchange",
+   "precision": "6"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "accounting_details_section",
+   "fieldtype": "Section Break",
+   "label": "Accounting Details"
+  },
+  {
+   "fieldname": "party_type",
+   "fieldtype": "Link",
+   "label": "Party Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "party",
+   "fieldtype": "Dynamic Link",
+   "label": "Party",
+   "options": "party_type"
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-10 17:55:03.482947",
+ "modified_by": "Administrator",
+ "module": "Training App",
+ "name": "ParentDoctype",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

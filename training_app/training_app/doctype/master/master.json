@@ -1,0 +1,298 @@
+{
+ "actions": [
+  {
+   "action": "training_app.training_app.doctype.parentdoctype.parentdoctype.execute_function",
+   "action_type": "Server Action",
+   "label": "Execute"
+  },
+  {
+   "action": "Form/Customer/{frm.doc.customer}",
+   "action_type": "Route",
+   "label": "Route"
+  }
+ ],
+ "allow_rename": 1,
+ "autoname": "format:PD-{##}",
+ "creation": "2023-09-10 19:36:27.350459",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "master_tab",
+  "party_type",
+  "party",
+  "customer",
+  "column_break_h6lwy",
+  "discount_percentage",
+  "discount_amount",
+  "company",
+  "enable",
+  "user",
+  "accounting_details_section",
+  "account",
+  "column_break_tatwu",
+  "currency",
+  "exchange",
+  "section_break_gijqt",
+  "item_group",
+  "child_field",
+  "section_break_fvku2",
+  "total_quantity",
+  "column_break_yjmge",
+  "total",
+  "net_total",
+  "txt",
+  "abra",
+  "delivery_date",
+  "sales_partner",
+  "more_tab",
+  "table_multiselect",
+  "date_tab",
+  "start_date",
+  "end_date",
+  "datetime",
+  "column_break_8bpry",
+  "days",
+  "hours",
+  "section_break_brr6u"
+ ],
+ "fields": [
+  {
+   "fieldname": "party_type",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Party Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "party",
+   "fieldtype": "Dynamic Link",
+   "hidden": 1,
+   "label": "Party",
+   "options": "party_type"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fetch_from": "account.account_currency",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "exchange",
+   "fieldtype": "Currency",
+   "label": "Exchange",
+   "precision": "6"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable",
+   "fieldtype": "Check",
+   "label": "Enable"
+  },
+  {
+   "fieldname": "column_break_h6lwy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "discount_percentage",
+   "fieldtype": "Float",
+   "label": "Discount Percentage"
+  },
+  {
+   "depends_on": "// eval:doc.discount_percentage == 50",
+   "fieldname": "discount_amount",
+   "fieldtype": "Currency",
+   "label": "Discount Amount"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "company",
+   "options": "Company"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "accounting_details_section",
+   "fieldtype": "Section Break",
+   "label": "Accounting Details"
+  },
+  {
+   "fieldname": "account",
+   "fieldtype": "Link",
+   "label": "Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "section_break_gijqt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "datetime",
+   "fieldtype": "Datetime",
+   "label": "Datetime"
+  },
+  {
+   "fieldname": "section_break_brr6u",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "item_group",
+   "fieldtype": "Link",
+   "label": "Item Group",
+   "options": "Item Group"
+  },
+  {
+   "fieldname": "child_field",
+   "fieldtype": "Table",
+   "label": "Child Field",
+   "options": "Child"
+  },
+  {
+   "fieldname": "section_break_fvku2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_quantity",
+   "fieldtype": "Float",
+   "label": "Total Quantity"
+  },
+  {
+   "fieldname": "column_break_yjmge",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total"
+  },
+  {
+   "fieldname": "net_total",
+   "fieldtype": "Currency",
+   "label": "Net Total "
+  },
+  {
+   "fieldname": "txt",
+   "fieldtype": "Data",
+   "label": "txt"
+  },
+  {
+   "fieldname": "abra",
+   "fieldtype": "Data",
+   "label": "Abra"
+  },
+  {
+   "fieldname": "delivery_date",
+   "fieldtype": "Date",
+   "label": "Delivery Date "
+  },
+  {
+   "fieldname": "sales_partner",
+   "fieldtype": "Link",
+   "label": "Sales Partner",
+   "options": "Sales Partner"
+  },
+  {
+   "fieldname": "master_tab",
+   "fieldtype": "Tab Break",
+   "label": "Master"
+  },
+  {
+   "fieldname": "more_tab",
+   "fieldtype": "Tab Break",
+   "label": "More"
+  },
+  {
+   "fieldname": "table_multiselect",
+   "fieldtype": "Table MultiSelect",
+   "label": "Table MultiSelect",
+   "options": "Child"
+  },
+  {
+   "fieldname": "column_break_tatwu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "date_tab",
+   "fieldtype": "Tab Break",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_8bpry",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "days",
+   "fieldtype": "Int",
+   "label": "Days"
+  },
+  {
+   "fieldname": "hours",
+   "fieldtype": "Int",
+   "label": "Hours"
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "User",
+   "options": "User"
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "group": "Billing",
+   "link_doctype": "Sales Invoice",
+   "link_fieldname": "customer"
+  },
+  {
+   "group": "Billing",
+   "link_doctype": "Sales Order",
+   "link_fieldname": "master"
+  }
+ ],
+ "modified": "2023-09-30 14:27:24.547495",
+ "modified_by": "Administrator",
+ "module": "Training App",
+ "name": "Master",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

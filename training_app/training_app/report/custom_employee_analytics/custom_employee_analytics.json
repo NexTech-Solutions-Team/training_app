@@ -1,0 +1,38 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2023-09-15 23:45:16.140389",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "json": "{\"columns\":[{\"fieldtype\":\"Link\",\"options\":\"Employee\",\"width\":120,\"label\":\"Employee\",\"fieldname\":\"employee\",\"id\":\"employee\",\"name\":\"Employee\",\"editable\":false,\"compareValue\":null},{\"fieldname\":\"cost_center\",\"fieldtype\":\"Link\",\"label\":\"Default Cost Center\",\"insert_after_index\":0,\"link_field\":\"company\",\"doctype\":\"Company\",\"options\":\"Cost Center\",\"width\":100,\"id\":\"cost_center\",\"name\":\"Default Cost Center\",\"editable\":false,\"compareValue\":null},{\"fieldtype\":\"Data\",\"width\":200,\"label\":\"Name\",\"fieldname\":\"name\",\"id\":\"name\",\"name\":\"Name\",\"editable\":false,\"compareValue\":null},{\"fieldtype\":\"Date\",\"width\":100,\"label\":\"Date of Birth\",\"fieldname\":\"date_of_birth\",\"id\":\"date_of_birth\",\"name\":\"Date of Birth\",\"editable\":false},{\"fieldtype\":\"Link\",\"options\":\"Branch\",\"width\":120,\"label\":\"Branch\",\"fieldname\":\"branch\",\"id\":\"branch\",\"name\":\"Branch\",\"editable\":false,\"compareValue\":null},{\"fieldtype\":\"Link\",\"options\":\"Department\",\"width\":120,\"label\":\"Department\",\"fieldname\":\"department\",\"id\":\"department\",\"name\":\"Department\",\"editable\":false,\"compareValue\":null},{\"fieldtype\":\"Link\",\"options\":\"Designation\",\"width\":120,\"label\":\"Designation\",\"fieldname\":\"designation\",\"id\":\"designation\",\"name\":\"Designation\",\"editable\":false,\"compareValue\":null},{\"fieldtype\":\"\",\"width\":100,\"label\":\"Gender\",\"fieldname\":\"gender\",\"id\":\"gender\",\"name\":\"Gender\",\"editable\":false,\"compareValue\":null},{\"fieldtype\":\"Link\",\"options\":\"Company\",\"width\":120,\"label\":\"Company\",\"fieldname\":\"company\",\"id\":\"company\",\"name\":\"Company\",\"editable\":false,\"compareValue\":null}],\"filters\":{\"company\":\"TechSolutions-Next\",\"parameter\":\"Department\"}}",
+ "letter_head": "Test Letter Head",
+ "modified": "2023-09-15 23:48:25.757163",
+ "modified_by": "Administrator",
+ "module": "Training App",
+ "name": "Custom Employee Analytics",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Employee",
+ "reference_report": "Employee Analytics",
+ "report_name": "Custom Employee Analytics",
+ "report_type": "Custom Report",
+ "roles": [
+  {
+   "role": "HR User"
+  },
+  {
+   "role": "Employee"
+  },
+  {
+   "role": "HR Manager"
+  },
+  {
+   "role": "Employee Self Service"
+  }
+ ]
+}

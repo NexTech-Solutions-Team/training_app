@@ -6,15 +6,21 @@ app_publisher = "Mohamed Abdulsalam"
 app_description = "Training App]"
 app_email = "moha2016it@gmail.com"
 app_license = "MIT"
+# =============
 
-# Includes in <head>
+my_var = "Mohamed"
+
+
+
+# Includes in <head>    {insert static JS and CSS assets in various parts of your site.}
 # ------------------
-
 # include js, css files in header of desk.html
+# {These hooks allow you to inject JS / CSS in desk.html which renders the Desk.}
 # app_include_css = "/assets/training_app/css/training_app.css"
 # app_include_js = "/assets/training_app/js/training_app.js"
 
 # include js, css files in header of web template
+# {These hooks allow you to inject JS / CSS in web.html which renders the Portal..}
 # web_include_css = "/assets/training_app/css/training_app.css"
 # web_include_js = "/assets/training_app/js/training_app.js"
 
@@ -22,14 +28,24 @@ app_license = "MIT"
 # website_theme_scss = "training_app/public/scss/website"
 
 # include js, css files in header of web form
+# {These hooks allow you to add inject static JS and CSS assets in "web_form.html" which is used to render Web Forms. These will work only for Standard Web Forms.}
 # webform_include_js = {"doctype": "public/js/doctype.js"}
 # webform_include_css = {"doctype": "public/css/doctype.css"}
 
 # include js in page
+# {to inject JS assets in Standard Desk Pages.0}
 # page_js = {"page" : "public/js/file.js"}
+# page_js = {"backups" : "public/js/file.js"}
+# page_js = {"backups" : "public/js/backups.js"}
 
-# include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+# include js in doctype views >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+# doctype_js = {"Item" : "public/js/item.js"}
+# doctype_js = {
+	# "Sales Order" : "public/js/doctype_js/sales_order.js",
+	# "Rooms" : "public/js/doctype_js/rooms.js",
+	# "*" : "public/js/doctype_js/rooms.js",
+
+# }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -95,19 +111,23 @@ app_license = "MIT"
 # Override standard doctype classes
 
 # override_doctype_class = {
-#	"ToDo": "custom_app.overrides.CustomToDo"
+# 	"ToDo": "custom_app.overrides.CustomToDo"
 # }
-
+# override_doctype_class = {
+	# "Rooms": "training_app.overrides.CustomRooms",
+	# "Item": "training_app.overrides.CustomItem"
+# }
 # Document Events
 # ---------------
 # Hook on document methods and events
 
 # doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
+# 	"*": {
+# 		# "after_insert": "training_app.overrides.after_insert_all"
+# 		# "on_update": "method",
+# 		# "on_cancel": "method",
+# 		# "on_trash": "method"
+# 	}
 # }
 
 # Scheduled Tasks
@@ -198,4 +218,37 @@ app_license = "MIT"
 
 # auth_hooks = [
 #	"training_app.auth.validate"
+# ]
+
+
+# fixtures = [
+#     {
+#         "Master":{"name": ["=",["PD-44", "PD-43"]] }
+#     },
+#     {
+#         "Custom Field": {"name": "Item-is_room"}
+#     }
+    # {
+    #     "Property Setter":{}
+    # }
+
+# ]
+
+# fixtures =[
+# 	{
+# 		"doctype": "Master", 
+# 		"filters": { 
+# 			"name": [ "in", ["PD-44", "PD-43"] ] 
+# 			}
+
+# 	},
+#     {
+# 		"doctype": "Master", 
+# 		"filters": { 
+# 			"name": [ "in", ["PD-44", "PD-43"] ] 
+# 			}
+
+# 	},
+
+
 # ]

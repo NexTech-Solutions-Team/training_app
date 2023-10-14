@@ -94,10 +94,10 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-08-18 21:15:46.021470",
+ "modified": "2023-08-22 15:37:35.424867",
  "modified_by": "Administrator",
  "module": "Training App",
- "name": "Client Side Scripting",
+ "name": "Our Client Scripting",
  "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
